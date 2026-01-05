@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="checkout.html">Checkout</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-p1">
+        <h2>Checkout</h2>
+        <p>Fill the details below to place your order.</p>
+
+        <form id="checkoutForm" class="checkout-form">
+            <h3>Billing Details</h3>
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Your Name" required>
+
+            <label>Phone Number</label>
+            <input type="text" placeholder="Your Phone" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Your Email" required>
+
+            <label>Full Address</label>
+            <textarea placeholder="Your Address" required></textarea>
+
+            <h3>Payment Method</h3>
+
+            <select required>
+                <option value="">Select Payment Method</option>
+                <option value="cod">Cash on Delivery</option>
+                <option value="online">Online Payment</option>
+            </select>
+
+            <button type="submit" class="normal">Place Order</button>
+        </form>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <a href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
+            <h4>Contact</h4>
+            <p> <strong>Address:</strong> Parvati Industrial Estate</p>
+            <p><strong>Phone:</strong> <a href="tel:8928480911">8928480911</a></p>
+            <p> <strong>Hours:</strong> 10:00-18:00, Mon-Sat</p>
+
+            <div class="follow">
+                <h4>Follow US</h4>
+
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="dinforma.html">Delivery Information</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="terms&condition.html">Terms & Condition</a>
+            <a href="contact.html">Contact Us</a>
+
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="#">My Whislist</a>
+            <a href="#">Track My Order</a>
+            <a href="contact.html">Help</a>
+
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From app store or Google play</p>
+
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateway</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyrigth">
+            <p>@ 2025 - HTML CSS Ecommerce Website</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.getElementById("checkoutForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+            localStorage.setItem("orderItems", JSON.stringify(cart));
+
+
+            window.location.href = "thankyou.html";
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

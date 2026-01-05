@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Project</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li style="position: relative;">
+                    <a href="cart.html">
+                        <i id="lg-bag" class="fa-solid fa-bag-shopping"></i>
+                        <span id="cart-count"
+                            style="position:absolute; top:-8px; background:red; color:#fff; font-size:10px; padding:2px 6px; border-radius:50%; display:none;">0</span>
+                    </a>
+                </li>
+
+                <li><a href="#"><i id="close" class="fa fa-times"></i></a></li>
+            </ul>
+            <div id="mobile">
+                <i id="bar" class="fa-solid fa-bars"></i>
+                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <section id="page-header" class="about-header">
+
+
+        <h2>#Let's Talk</h2>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+
+    </section>
+
+
+    <section id="cart" class="section-p1">
+        <h3>Your Cart</h3>
+
+        <div id="cart-container"></div>
+
+        <h3 id="totalAmount">Total Amount: <span id="cart-total">0</span></h3>
+
+        <!-- <table width="100%">
+            
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Images</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtital</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="img/products/f1.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shrit</td>
+                    <td>Rs. 349</td>
+                    <td><input type="number" value="1"></td>
+                    <td>Rs. 349</td>
+                </tr>
+                <tr>
+                    <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="img/products/f2.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shrit</td>
+                    <td>Rs. 349</td>
+                    <td><input type="number" value="1"></td>
+                    <td>Rs. 349</td>
+                </tr>
+                <tr>
+                    <td><a href=""><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="img/products/f3.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shrit</td>
+                    <td>Rs. 349</td>
+                    <td><input type="number" value="1"></td>
+                    <td>Rs. 349</td>
+                </tr>
+            </tbody>
+
+        </table> -->
+    </section>
+
+
+
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupn">
+            <h3>Apply Coupn</h3>
+
+            <div>
+                <input type="text" placeholder="Enter Your Coupn">
+                <button class="normal">Apply</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <!-- <tr>
+                    <td>Cart subtotal</td>
+                    <td>Rs. 698</td>
+                </tr> -->
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td id="totalAmount"><strong>Total Amount</strong></td>
+                    <td id="cartTotalValue">Rs. 0</td>
+                </tr>
+            </table>
+
+            <button class="normal" id="checkoutBtn">Proceed to checkout</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <a href="index.html"><img class="logo" src="img/logo.png" alt=""></a>
+            <h4>Contact</h4>
+            <p> <strong>Address:</strong> Parvati Industrial Estate</p>
+            <p><strong>Phone:</strong> <a href="tel:8928480911">8928480911</a></p>
+            <p> <strong>Hours:</strong> 10:00-18:00, Mon-Sat</p>
+
+            <div class="follow">
+                <h4>Follow US</h4>
+
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="dinforma.html">Delivery Information</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="terms&condition.html">Terms & Condition</a>
+            <a href="contact.html">Contact Us</a>
+
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="#">My Whislist</a>
+            <a href="#">Track My Order</a>
+            <a href="contact.html">Help</a>
+
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From app store or Google play</p>
+
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateway</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyrigth">
+            <p>@ 2025 - HTML CSS Ecommerce Website</p>
+
+        </div>
+
+    </footer>
+
+    <!-- <script>
+
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+
+        const cartContainer = document.querySelector("#cart-container");
+        const totalAmountEl = document.querySelector("#cart-total");
+
+        function loadCart() {
+            if (cartItems.length === 0) {
+                cartContainer.innerHTML = "<h3>Your cart is empty 🛒</h3>";
+                totalAmountEl.innerText = "0";
+                return;
+            }
+
+            let cartHTML = `
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Remove</th>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+
+            let grandTotal = 0;
+
+            cartItems.forEach((item, index) => {
+                let itemTotal = item.qty * item.price;
+                grandTotal += itemTotal;
+
+                cartHTML += `
+            <tr>
+                <td><button class="remove" data-index="${index}"><a href=""><i class="far fa-times-circle"></i></a></button></td>
+                <td><img src="${item.img}" width="60"></td>
+                <td>${item.name}</td>
+                <td>Rs. ${item.price}</td>
+                <td>
+                    <button class="qty-btn minus" data-index="${index}">-</button>
+                    <span>${item.qty}</span>
+                    <button class="qty-btn plus" data-index="${index}">+</button>
+                </td>
+                <td>Rs. ${itemTotal}</td>
+            </tr>
+        `;
+            });
+
+            cartHTML += `
+            </tbody>
+        </table>
+    `;
+
+            cartContainer.innerHTML = cartHTML;
+            totalAmountEl.innerText = "Rs. " + grandTotal;
+
+            attachCartEvents();
+        }
+
+
+
+        function attachCartEvents() {
+
+            document.querySelectorAll(".remove").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    let index = btn.dataset.index;
+                    cartItems.splice(index, 1);
+                    saveCart();
+                });
+            });
+
+
+            document.querySelectorAll(".plus").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    let index = btn.dataset.index;
+                    cartItems[index].qty++;
+                    saveCart();
+                });
+            });
+
+            document.querySelectorAll(".minus").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    let index = btn.dataset.index;
+                    if (cartItems[index].qty > 1) {
+                        cartItems[index].qty--;
+                    }
+                    saveCart();
+                });
+            });
+        }
+
+
+        function saveCart() {
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+            loadCart();
+        }
+
+        loadCart();
+        const totalAmountText = document.querySelector("#totalAmount");
+
+
+        const totalAmountValue = parseInt(totalAmountText.innerText.replace(/[^0-9]/g, ""));
+
+
+        document.querySelector("#cartTotalValue").innerText = `Rs. ${totalAmountValue}`;
+
+        let couponApplied = false;
+
+        function applyCoupon() {
+            const input = document.querySelector("#coupn input");
+            const couponCode = input.value.trim().toUpperCase();
+            const totalDisplay = document.querySelector("#cartTotalValue");
+            const cartTotalSpan = document.querySelector("#cart-total");
+
+            let totalAmount = parseInt(cartTotalSpan.innerText.replace(/[^0-9]/g, ""));
+
+            if (couponApplied) {
+                alert("Coupon pehle hi apply ho chuka hai!");
+                return;
+            }
+
+            let finalAmount = totalAmount;
+
+            if (couponCode === "SAVE10") {
+                let discount = totalAmount * 0.10;
+                finalAmount = totalAmount - discount;
+                alert("SAVE10 Applied: 10% OFF 🎉");
+            }
+
+            else if (couponCode === "SAVE20") {
+                let discount = totalAmount * 0.20;
+                finalAmount = totalAmount - discount;
+                alert("SAVE20 Applied: 20% OFF 🔥");
+            }
+
+            else if (couponCode === "FLAT100") {
+                finalAmount = totalAmount - 100;
+                if (finalAmount < 0) finalAmount = 0;
+                alert("FLAT100 Applied: ₹100 OFF 🎁");
+            }
+
+            else if (couponCode === "FREESHIP") {
+                alert("FREESHIP Applied: Shipping Free 🚚 (Already free 😄)");
+            }
+
+            else {
+                alert("Invalid Coupon Code ❌");
+                input.value = "";
+                return;
+            }
+
+            // Update UI
+            totalDisplay.innerText = `Rs. ${finalAmount}`;
+
+            couponApplied = true;
+            input.value = "";
+        }
+
+        // Button Event
+        document.querySelector("#coupn button").addEventListener("click", applyCoupon);
+
+        document.getElementById("checkoutBtn").addEventListener("click", () => {
+            window.location.href = "checkout.html";
+        });
+
+        // addToCart({
+        //     name: "T-Shirt",
+        //     price: 499,
+        //     qty: 1,
+        //     img: "img/products/f1.jpg"
+        // });
+    </script> -->
+
+    <script>
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+        const cartContainer = document.querySelector("#cart-container");
+        const totalAmountEl = document.querySelector("#cart-total");
+        const cartCountEl = document.querySelector("#cart-count");
+
+        function updateCartIcon() {
+            let count = cartItems.reduce((sum, item) => sum + item.qty, 0);
+            if (count > 0) {
+                cartCountEl.style.display = "inline-block";
+                cartCountEl.innerText = count;
+            } else {
+                cartCountEl.style.display = "none";
+            }
+        }
+
+        // ===========================
+        // LOAD CART ITEMS
+        // ===========================
+        function loadCart() {
+            if (cartItems.length === 0) {
+                cartContainer.innerHTML = "<h3>Your cart is empty 🛒</h3>";
+                totalAmountEl.innerText = "0";
+                updateCartIcon();
+                document.querySelector("#cartTotalValue").innerText = "Rs. 0";
+                return;
+            }
+
+            let cartHTML = `
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>Remove</th>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+    `;
+
+            let grandTotal = 0;
+
+            cartItems.forEach((item, index) => {
+                let itemTotal = item.qty * item.price;
+                grandTotal += itemTotal;
+
+                cartHTML += `
+        <tr>
+            <td><button class="remove" data-index="${index}"><i class="far fa-times-circle"></i></button></td>
+            <td><img src="${item.img}" width="60"></td>
+            <td>${item.name}</td>
+            <td>Rs. ${item.price}</td>
+            <td>
+                <button class="qty-btn minus" data-index="${index}">-</button>
+                <span>${item.qty}</span>
+                <button class="qty-btn plus" data-index="${index}">+</button>
+            </td>
+            <td>Rs. ${itemTotal}</td>
+        </tr>
+        `;
+            });
+
+            cartHTML += `
+        </tbody>
+    </table>
+    `;
+
+            cartContainer.innerHTML = cartHTML;
+
+            totalAmountEl.innerText = grandTotal;
+            document.querySelector("#cartTotalValue").innerText = `Rs. ${grandTotal}`;
+
+            attachCartEvents();
+            updateCartIcon();
+        }
+
+
+        function attachCartEvents() {
+
+            // Remove Item
+            document.querySelectorAll(".remove").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    let index = btn.dataset.index;
+                    cartItems.splice(index, 1);
+                    saveCart();
+                });
+            });
+
+            // Increase Qty
+            document.querySelectorAll(".plus").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    let index = btn.dataset.index;
+                    cartItems[index].qty++;
+                    saveCart();
+                });
+            });
+
+            // Decrease Qty
+            document.querySelectorAll(".minus").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    let index = btn.dataset.index;
+                    if (cartItems[index].qty > 1) {
+                        cartItems[index].qty--;
+                    }
+                    saveCart();
+                });
+            });
+        }
+
+
+        function saveCart() {
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+            loadCart();
+        }
+
+
+        let couponApplied = false;
+
+        function applyCoupon() {
+            const input = document.querySelector("#coupn input");
+            const couponCode = input.value.trim().toUpperCase();
+            const totalDisplay = document.querySelector("#cartTotalValue");
+            const cartTotalSpan = document.querySelector("#cart-total");
+
+            let totalAmount = parseInt(cartTotalSpan.innerText.replace(/[^0-9]/g, ""));
+
+            if (couponApplied) {
+                alert("Coupon pehle hi apply ho chuka hai!");
+                return;
+            }
+
+            let finalAmount = totalAmount;
+
+            if (couponCode === "SAVE10") {
+                let discount = totalAmount * 0.10;
+                finalAmount = totalAmount - discount;
+                alert("SAVE10 Applied: 10% OFF 🎉");
+            }
+            else if (couponCode === "SAVE20") {
+                let discount = totalAmount * 0.20;
+                finalAmount = totalAmount - discount;
+                alert("SAVE20 Applied: 20% OFF 🔥");
+            }
+            else if (couponCode === "FLAT100") {
+                finalAmount = totalAmount - 100;
+                if (finalAmount < 0) finalAmount = 0;
+                alert("FLAT100 Applied: ₹100 OFF 🎁");
+            }
+            else if (couponCode === "FREESHIP") {
+                alert("FREESHIP Applied: Shipping Free 🚚 (Already free 😄)");
+            }
+            else {
+                alert("Invalid Coupon Code ❌");
+                input.value = "";
+                return;
+            }
+
+            totalDisplay.innerText = `Rs. ${finalAmount}`;
+            couponApplied = true;
+            localStorage.setItem("finalAmount", finalAmount);
+
+            input.value = "";
+        }
+
+
+        document.querySelector("#coupn button").addEventListener("click", applyCoupon);
+
+        document.getElementById("checkoutBtn").addEventListener("click", () => {
+            window.location.href = "checkout.html";
+        });
+
+        loadCart();
+        updateCartIcon();
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

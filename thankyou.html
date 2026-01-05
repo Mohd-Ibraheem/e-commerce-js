@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Order Placed</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f7f7f7;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .box {
+            background: #fff;
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #088178;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 25px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #088178;
+            color: white;
+        }
+
+        .product-img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2> Thank You! Your Order Has Been Placed</h2>
+        <p>Your booked product details:</p>
+
+        <table id="orderTable">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price (₹)</th>
+                    <th>Qty</th>
+                    <th>Total (₹)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script>
+
+        let orderItems = JSON.parse(localStorage.getItem("orderItems")) || [];
+        let storedFinalAmount = localStorage.getItem("finalAmount");
+
+        let tableBody = document.querySelector("#orderTable tbody");
+
+        let calculatedTotal = 0;
+
+
+
+        orderItems.forEach(item => {
+            let tr = document.createElement("tr");
+
+            let itemTotal = item.price * item.qty;
+            calculatedTotal += itemTotal;
+
+            tr.innerHTML = `
+        <td><img src="${item.img}" class="product-img"></td>
+        <td>${item.name}</td>
+        <td>${item.price}</td>
+        <td>${item.qty}</td>
+        <td>${itemTotal}</td>
+    `;
+
+            tableBody.appendChild(tr);
+        });
+
+        let grandTotal = storedFinalAmount
+            ? parseInt(storedFinalAmount)
+            : calculatedTotal;
+
+
+        let totalRow = document.createElement("tr");
+        totalRow.innerHTML = `
+    <td colspan="4" style="font-weight:bold; text-align:right;">
+        Grand Total (₹)
+    </td>
+    <td style="font-weight:bold;">
+        ${grandTotal}
+    </td>`
+            ;
+
+        tableBody.appendChild(totalRow);
+
+
+        localStorage.removeItem("cartItems");
+        // localStorage.removeItem("finalAmount");
+    </script>
+
+</body>
+
+</html>
